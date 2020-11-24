@@ -33,7 +33,6 @@
         <beans:property name="order" value="3"></beans:property>
     </beans:bean>
     
-    <beans:bean id="excelDownloadView" class="com.poi.util.ExcelDownloadView"/>
     
     <beans:bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
     
