@@ -20,6 +20,7 @@
 				<label for="name">Name</label>
 				<sf:input path="name" id="name" class="form-control"
 					placeholder="상품명 입력" />
+				<sf:errors path="name" cssStyle="color:#ff0000;"/>
 			</div>
 			
 			<!-- 카테고리 form -->
@@ -33,6 +34,7 @@
 			<div class="form-group">
 				<label for="price">Price</label>
 				<sf:input path="price" id="price" class="form-control" />
+				<sf:errors path="price" cssStyle="color:#ff0000;"/>
 			</div>
 			
 			<!-- 제조사 form -->
@@ -40,6 +42,7 @@
 				<label for="manufacturer">Manufacturer</label>
 				<sf:input path="manufacturer" id="manufacturer" class="form-control"
 					placeholder="제조사 입력" />
+				<sf:errors path="manufacturer" cssStyle="color:#ff0000;"/>
 			</div>
 			
 			<!-- 재고 form -->
@@ -47,6 +50,7 @@
 				<label for="unitInStock">unitInStock</label>
 				<sf:input path="unitInStock" id="unitInStock" class="form-control"
 					palceholder="재고 입력" />
+				<sf:errors path="unitInStock" cssStyle="color:#ff0000;"/>
 			</div>
 			
 			<!-- 상품설명 form -->
