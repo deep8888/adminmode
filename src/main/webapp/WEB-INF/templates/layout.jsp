@@ -5,6 +5,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <script src="https://kit.fontawesome.com/5646d8b8f0.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>eStore</title>
     <!-- Bootstrap core CSS -->

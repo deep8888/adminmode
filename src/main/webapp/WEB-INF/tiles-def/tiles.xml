@@ -35,10 +35,19 @@
     <put-attribute name="title" value="deep의 eStore-[관리자 모드]" /> <!-- title 재정의 -->
     <put-attribute name="body" value="/WEB-INF/views/admin.jsp" /> 
   </definition>
-  
+  <!-- base 정의를 상속받아.  -->
+    <definition name="addProduct" extends="base">
+    <put-attribute name="title" value="deep의 eStore-[관리자 모드: Add Product]" /> <!-- title 재정의 -->
+    <put-attribute name="body" value="/WEB-INF/views/addProduct.jsp" /> 
+  </definition>
     <!-- base 정의를 상속받아.  -->
     <definition name="productInventory" extends="base">
     <put-attribute name="title" value="deep의 eStore-[productInventory]" /> <!-- title 재정의 -->
     <put-attribute name="body" value="/WEB-INF/views/productInventory.jsp" /> 
+  </definition>
+   <!-- base 정의를 상속받아.  -->
+    <definition name="updateProduct" extends="base">
+    <put-attribute name="title" value="deep의 eStore-[관리자 모드: Update Product]" /> <!-- title 재정의 -->
+    <put-attribute name="body" value="/WEB-INF/views/updateProduct.jsp" /> 
   </definition>
 </tiles-definitions>

@@ -20,4 +20,20 @@ public class ProductService {
 		//여기 리턴값이 결국 products
 		return productDao.getProducts();
 	}
+	
+	public boolean addProduct(Product product) {
+		return productDao.addProduct(product);
+	}
+	public boolean deleteProduct(int id) {
+		//아마 지금은 빨간줄 뜰거야 아직 메소드 안만듬
+		return productDao.deleteProduct(id);
+	}
+	public Product getProductById(int id) {
+		
+		return productDao.getProductById(id); 
+	}
+	public boolean updateProduct(Product product) {
+
+		return productDao.updateProduct(product);
+	}
 }
