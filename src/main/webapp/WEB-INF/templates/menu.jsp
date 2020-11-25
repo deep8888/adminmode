@@ -22,8 +22,41 @@
 				</li>
 				<li class="nav-item"><a class="nav-link"
 					href="<c:url value="/products"/>"> Product</a></li>
-				<li class="nav-item"><a class="nav-link" href="<c:url value="/admin"/>">admin</a>
-				</li>
+				<%-- <li class="nav-item"><a class="nav-link" href="<c:url value="/admin"/>">admin</a>
+				</li> --%>
+				
+				<!-- 리퀘스트의 주체 누군지 받아와 아무튼  null이 아니라면 누군가가 로그인 한건 마자 -->
+				<c:if test="${pageContext.request.userPrincipal.name != null }">
+				
+					<!-- 로그인 한사람의 이름이 admin이라면 admin탭도 뜨게해라! -->
+					<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+						<li class="nav-item">
+						<a class="nav-link"	href="<c:url value="/admin"/>">AdminPage</a>
+						</li>
+					</c:if>
+					
+					<!-- 로그인 한 경우 로그아웃 탭 뜨게한다 -->
+					<!-- logout 버튼을 누르게되면 -->
+					<li class="nav-item">
+					<a class="nav-link" href="javascript:document.getElementById('logout').submit()">Logout</a>
+					</li>
+					
+					<!-- logout 이라는 id를 가진 form 데이터(토큰..)를 /logout url에 post메소드로 자동적으로 서버쪽에 날려버리는겨 -->
+					<form id="logout" action="<c:url value="/logout"/> " method="post">
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token }"/>
+					</form>
+				</c:if>
+				
+				<!-- 로그인 하지 않은경우! name이 null이면 로그인 안한상태 -->
+				<c:if test="${pageContext.request.userPrincipal.name == null}">
+					<!-- 로그인 탭 뜨게 한다. -->
+					<li class="nav-item">
+					<a class="nav-link" href="<c:url value="/login"/> ">Login</a>
+					</li>
+				</c:if>
+				
+				
+				
 			</ul>
 			<form class="form-inline mt-2 mt-md-0">
 				<input class="form-control mr-sm-2" type="text" placeholder="Search"
